@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="post">
+    {%csrf_token%}
+    <textarea rows="20" cols="50">
+        {%for i in chat%}
+         From:{{i.from_user}}
+         To:{{i.to_user}}
+         Message:{{i.message}}
+
+        {%endfor%}
+    </textarea>
+    <br>
+    <input type="text" name="message">
+    <input type="submit" value="send">
+</form>
+
+</body>
+</html>
