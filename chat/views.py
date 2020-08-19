@@ -12,7 +12,6 @@ def chat_page(request):
     # topic_name = user1.username + "_" + user2.username
     topic_name = "user1_user2"
     if request.method == "POST":
-
         message = request.POST['message']
         message_dict = {
             "from_user": user1.username,
