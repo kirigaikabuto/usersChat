@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{%for i in users%}
+   <p>{{i.username}}<a href="{% url 'chat_page' user2_pk=i.pk%}">Отправить сообщение</a></p>
+    <br>
+{%endfor%}
+</body>
+</html>
