@@ -34,6 +34,7 @@ def chat_page(request, user2_pk):
         producer.flush()
 
         myKakfaConsumer(topic_name)
+
     chat = Chat.objects.filter(chat_id=topic_name,).all()
 
     context = {
